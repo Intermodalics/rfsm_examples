@@ -2,6 +2,7 @@ require "rfsm"
 
 model=rfsm.load("coordination/parallel_transitions_1.lua")
 fsm=rfsm.init(model)
-rfsm.step(fsm,5)
+
+rfsm.run(fsm)
 rfsm.send_events(fsm,"e13","e12_e34")
-rfsm.step(fsm,5)
+rfsm.run(fsm)
